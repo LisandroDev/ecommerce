@@ -1,0 +1,14 @@
+.lady-img {
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.vector {
+  border-radius: 87% 12% 37% 60% / 60% 34% 65% 40%;
+  background: #3c9379;
+}
+
+.landing-font {
+  font-family: "Manrope";
+  font-style: normal;
+  letter-spacing: 0.5px;
+}
