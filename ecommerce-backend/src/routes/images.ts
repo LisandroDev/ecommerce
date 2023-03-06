@@ -17,7 +17,7 @@ router.get("/leavetheroad_shirt", (_req, res) => {
 });
 
 router.get("/retro_shoes", (_req, res) => {
-    res.sendFile(path.resolve('./src/public/clothesphoto/clothesphoto/retroShoes.jpg'));
+    res.sendFile(path.resolve('./src/public/clothesphoto/retroShoes.jpg'));
 });
 
 export default router
