@@ -1,3 +1,6 @@
+import {Product} from "../types"
+import { toNewProduct } from "../utils";
+
 const data = [
   { id: 1, title: "Nike Air", price: 109.95, category: "shoes", imageUrl: "/images/nike_air" },
   { id: 2, title: "Kiikii Shirt", price: 22, category: "shirt", imageUrl: "/images/kiiki_shirt" },
@@ -16,3 +19,11 @@ const data = [
     imageUrl: "/images/retro_shoes",
   },
 ];
+
+const products: Product [] = data.map(obj => {
+  const object = toNewProduct(obj) as Product;
+  object.id = obj.id;
+  return object
+});
+
+export default products;
