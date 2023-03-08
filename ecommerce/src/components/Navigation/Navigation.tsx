@@ -13,11 +13,9 @@ const Navigation = () => {
                     <li>Products</li>
                     <li>Categories</li>
                     <li>Brands</li>
+                    <li>Cart</li>
                 </ul>
             </div>
-
-            <div className='w-full text-center basis-1/5 md:block md:w-auto'>Cart</div>
-
         </div>
     )
 }
