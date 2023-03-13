@@ -8,7 +8,7 @@ const PopularProducts = () => {
     const [popularProducts, setpopularProducts] = useState([])
 
     useEffect(() => {
-        getProducts(3).then(data => { setpopularProducts(data) });
+        getProducts(4).then(data => { setpopularProducts(data) });
     }, [])
 
 
