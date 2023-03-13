@@ -7,7 +7,7 @@ type ProductCardProps = {
 
 
 const responsiveParent = cntl`lg:h-[448px] lg:w-[280px] md:h-[335px] md:w-[210px] rounded-lg`;
-const responsiveImg = cntl`lg:w-[280px] lg:h-[380px] md:w-[210px] md:h-[285px]`
+const responsiveImg = cntl`lg:w-[220px] lg:h-[320px] md:w-[210px] md:h-[285px]`
 const flexConfig = cntl`flex flex-col gap-y-4`
 
 const ProductCard = ({ product }: ProductCardProps) => {
