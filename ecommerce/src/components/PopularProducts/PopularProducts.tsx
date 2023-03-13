@@ -13,7 +13,7 @@ const PopularProducts = () => {
 
 
     return (
-        <div className="mt-6"><p className="font-bold align-center text-base md:text-xl lg:text-2xl manrope-font text-center ">Popular items</p>
+        <div className="mt-14"><p className=" align-center text-base md:text-xl lg:text-2xl manrope-font text-center ">Popular items</p>
             <div className="flex flex-wrap flex-row md:flex-row lg:flex-row gap-8 grow-0 justify-center items-center mt-12 ">{popularProducts ? popularProducts.map((product: Product) => <ProductCard product={product} />) : <> </>}</div></div>
     )
 }
