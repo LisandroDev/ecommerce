@@ -1,20 +1,26 @@
-import Brands from "./components/Brands/Brand";
-import Landing from "./components/Landing/Landing";
+import Home from "./components/Home/Home";
+import Shop from "./components/Shop/Shop";
 import Navigation from "./components/Navigation/Navigation";
-import Reasons from "./components/Reasons/Reasons";
-import PopularProducts from "./components/PopularProducts/PopularProducts";
-import './style.css'
+import Footer from "./components/Footer/Footer";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
+import "./style.css";
 
 const AppCommerce = () => {
+
   return (
-    <div className="App">
-      <Navigation />
-      <Landing />
-      <Brands />
-      <PopularProducts />
-      <Reasons />
-    </div>
+    <Router>
+      {" "}
+      <div className="App ">
+        <Navigation />
+        <Routes>
+          <Route path="/" Component={Home}/>
+          <Route path="/shop" Component={Shop} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
-}
+};
 
 export default AppCommerce;
