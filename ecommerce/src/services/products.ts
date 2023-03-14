@@ -1,5 +1,4 @@
 import axios from "axios";
-import { Product } from "../types/product";
 
 const getProducts = async (limit?: number) => {
   try {
