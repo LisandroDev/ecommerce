@@ -6,9 +6,9 @@ const Delivery = () => {
     <div>
       {" "}
       <div className="flex flex-col place-items-center mt-8">
-        <TbTruckDelivery  className="text-[#3C9379] w-16 h-16"/> <p className="text-base md:text-xl lg:text-2xl manrope-font text-center">Free Delivery</p>
+        <TbTruckDelivery  className="text-[#3C9379] w-16 h-16"/> <p className="text-base font-extralight  md:text-xl lg:text-2xl manrope-font text-center">Free Delivery</p>
       </div>{" "}
-      <div className="mt-6 text-[#535A56] w-18 text-xs text-center">
+      <div className="mt-6 text-[#535A56] w-18 text-sm text-center">
         Lorem ipsum dolor sit amet, consectetu adipiscing elit, sed do eiusmod
         tempor
       </div>
@@ -20,9 +20,9 @@ const Delivery = () => {
 const Trusted = () => {
   return (<div>
     <div className="flex flex-col place-items-center mt-8">
-      <VscWorkspaceTrusted className="text-[#3C9379] w-16 h-16 " /> <p className="text-base md:text-xl lg:text-2xl manrope-font text-center">Trusted Platform</p>
+      <VscWorkspaceTrusted className="text-[#3C9379] w-16 h-16 " /> <p className="text-base font-extralight  md:text-xl lg:text-2xl manrope-font text-center">Trusted Platform</p>
     </div>{" "}
-    <div className="mt-6 text-[#535A56] text-xs text-center">
+    <div className="mt-6 text-[#535A56] text-sm text-center">
       Lorem ipsum dolor sit amet, consectetu adipiscing elit, sed do eiusmod
       tempor
     </div>
@@ -31,9 +31,9 @@ const Trusted = () => {
 
 const Reasons = () => {
   return (
-    <div className="w-full flex flex-col justify-center text-3xl mt-8">
+    <div className="w-full flex flex-col justify-center text-3xl mt-24">
       {" "}
-      <div className="text-base md:text-xl lg:text-2xl manrope-font text-center">
+      <div className="text-base font-extralight  md:text-xl lg:text-2xl manrope-font text-center">
         Why Choose <span className="text-[#3C9379]">N</span>eithaClothes?
       </div>
       <div className="flex flex-row gap-x-8 justify-center mt-8">

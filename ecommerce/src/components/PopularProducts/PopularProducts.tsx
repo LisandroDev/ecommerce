@@ -13,8 +13,8 @@ const PopularProducts = () => {
 
 
     return (
-        <div className="mt-14"><p className=" align-center text-base md:text-xl lg:text-2xl manrope-font text-center ">Popular items</p>
-            <div className="grid grid-cols-2 justify-items-center md:flex-wrap md:flex md:flex-row lg:flex-row gap-8 grow-0 justify-center items-center mt-12 ">{popularProducts ? popularProducts.map((product: Product) => <ProductCard product={product} />) : <> </>}</div></div>
+        <div className="mt-24 "><p className=" align-center text-base md:text-xl lg:text-2xl font-extralight manrope-font text-center ">Shop our popular items now.</p>
+            <div className="grid grid-cols-2 justify-items-center  lg:flex lg:flex-row gap-8 grow-0 justify-center items-center mt-12 ">{popularProducts ? popularProducts.map((product: Product) => <ProductCard product={product} />) : <> </>}</div></div>
     )
 }
 

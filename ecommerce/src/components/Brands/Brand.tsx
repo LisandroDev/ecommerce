@@ -7,7 +7,7 @@ const BrandsLogos = () => {
 
 const Brands = () => {
     return (
-        <div className="mt-12 flex flex-col justify-center content-center"><p className="manrope-font  text-base md:text-xl lg:text-2xl text-center">We collaborate with TOP Brands</p> <BrandsLogos /> </div>
+        <div className="mt-12 flex flex-col justify-center content-center"><p className="manrope-font font-extralight text-base md:text-xl lg:text-2xl text-center">Shop trusted top brands collaborating with us.</p> <BrandsLogos /> </div>
     )
 }
 
