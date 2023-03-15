@@ -1,10 +1,7 @@
 import express from 'express';
-import products  from '../data/products'
-
+import ProductController from "../controllers/Product.controller"
 const router = express.Router();
 
-router.get('/', (_req, res) => {
-    res.json(products)
-})
+router.get('/', ProductController.GetAllProducts)
 
 export default router
