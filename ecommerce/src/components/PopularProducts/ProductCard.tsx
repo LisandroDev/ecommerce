@@ -13,8 +13,8 @@ const flexConfig = cntl`flex flex-col gap-y-4`
 const ProductCard = ({ product }: ProductCardProps) => {
     return (
         <div id="cardProduct" className={responsiveParent + flexConfig + "hover:scale-95 odd:hover:skew-y-1 even:hover:-skew-y-2 "}>
-            <img alt={product.title} src={`http://localhost:3003${product.imageUrl}`} className={responsiveImg + " w-[157.5px] h-[213.75px] rounded-3xl"} ></img>
-            <div className="manrope-font"><p className="text-black text-sm md:text-lg">{product.title}</p><p className="text-xs">USD {product.price}</p></div>
+            <img alt={product.name} src={`http://localhost:3003${product.imageUrl}`} className={responsiveImg + " w-[157.5px] h-[213.75px] rounded-3xl"} ></img>
+            <div className="manrope-font"><p className="text-black text-sm md:text-lg">{product.name}</p><p className="text-xs">USD {product.price}</p></div>
         </div>
     )
 }
