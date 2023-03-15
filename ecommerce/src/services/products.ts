@@ -1,10 +1,19 @@
 import axios from "axios";
 
+function shuffleArray(array: []) {
+  for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array
+}
+
 const getProducts = async (limit?: number) => {
   try {
     const response = await axios.get(`http://localhost:3003/products`);
     if (limit) {
-      return response.data.splice(0,limit);
+      
+      return shuffleArray(response.data).splice(0,limit);
     } else {
       return response.data;
     }
