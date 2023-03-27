@@ -16,7 +16,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
       className={
         responsiveParent +
         flexConfig +
-        "hover:scale-95 odd:hover:skew-y-1 even:hover:-skew-y-2 "
+        " hover:scale-95  "
       }
     >
       <img
