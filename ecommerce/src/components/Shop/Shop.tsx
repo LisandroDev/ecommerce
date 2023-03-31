@@ -30,13 +30,13 @@ const Shop = () => {
 
   return (
     <div className="flex justify-center">
-      Shop
-      <div className="grid grid-cols-3 gap-0 w-3/4">
+      <div className="flex justify-center gap-y-4 flex-col">
         <Products items={currentItems} loading={loading} />
         <Pagination
           itemsPerPage={itemsPerPage}
           totalItems={items.length}
           paginate={paginate}
+          currentPage={currentPage}
         />
       </div>
     </div>
