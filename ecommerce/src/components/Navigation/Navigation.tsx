@@ -1,7 +1,11 @@
 import "./Navigation.css";
 import { Link } from "react-router-dom";
+import { useCart } from "../Cart/CartProvider";
+import { TbShoppingCart } from "react-icons/tb";
 
 const Navigation = () => {
+  const { cartItems } = useCart();
+
   return (
     <div className="container flex flex-wrap flex-row items-center justify-center md:justify-between lg:justify-between mx-auto mt-5">
       <div className="w-full md:w-auto flex justify-center">
@@ -15,8 +19,17 @@ const Navigation = () => {
           <li>
             <Link to="/">Home</Link>
           </li>
-          <li><Link to="/shop">Shop</Link></li>
-          <li>Cart</li>
+          <li>
+            <Link to="/shop">Shop</Link>
+          </li>
+          <li>
+            <Link to="/cart">
+              {" "}
+              <div className="flex ">
+              <TbShoppingCart size={20} /> {cartItems.length}
+              </div>
+            </Link>
+          </li>
         </ul>
       </div>
     </div>

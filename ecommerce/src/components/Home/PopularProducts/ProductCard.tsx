@@ -5,16 +5,16 @@ type ProductCardProps = {
   product: Product;
 };
 
-const responsiveParent = cntl`lg:h-[448px] lg:w-[280px] md:h-[335px] md:w-[210px] rounded-lg`;
+const responsiveParent = cntl`lg:h-[448px] lg:w-[280px] md:h-[335px] md:w-[210px] rounded-lg `;
 const responsiveImg = cntl`lg:w-[220px] lg:h-[320px] md:w-[210px] md:h-[285px]`;
-const flexConfig = cntl`flex flex-col gap-y-4`;
+const flexConfig = cntl` flex flex-col justify-center align-center gap-y-4`;
 
 const ProductCard = ({ product }: ProductCardProps) => {
   return (
     <div
       id="cardProduct"
       className={
-        responsiveParent +
+        responsiveParent + " " +
         flexConfig +
         " hover:scale-95  "
       }
