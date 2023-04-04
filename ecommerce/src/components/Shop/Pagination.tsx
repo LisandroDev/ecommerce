@@ -17,7 +17,7 @@ const Pagination = ({ itemsPerPage, currentPage, totalItems, paginate }: Paginat
       <ul className='pagination flex gap-6 justify-center'>
         {pageNumbers.map(number => (
           <li key={number} id={`${number}`} className={`page-item w-7 text-center ${currentPage === number ? "rounded-full border-slate-400 bg-slate-200  " : ""}`}>
-            <button onClick={() => paginate(number)} className='page-link'>
+            <button onClick={() => paginate(number)} className='page-link '>
               {number}
             </button>
           </li>

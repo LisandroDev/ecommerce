@@ -24,7 +24,7 @@ const Filters = ({ categories, setfilters, filters }: FilterProps) => {
 
   return (
     <div className="manrope-font">
-      <ul>
+      <ul className="grid grid-cols-3 gap-x-4 gap-y-0 md:grid-cols-1 md:gap-y-1">
         {categories.map((category) => (
           <li  key={category}>
             <input

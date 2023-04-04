@@ -57,7 +57,7 @@ const Shop = () => {
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
   return (
-    <div className="flex sm:flex-row sm:flex-wrap md:flex-nowrap md:flex-row justify-center manrope-font">
+    <div className="flex flex-row flex-wrap md:flex-nowrap md:flex-row justify-center manrope-font">
       <div className="mt-24">
         <p>Filter by category: </p>
         <Filters
