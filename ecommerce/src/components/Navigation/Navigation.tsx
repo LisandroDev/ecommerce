@@ -4,7 +4,7 @@ import { useCart } from "../Cart/CartProvider";
 import { TbShoppingCart } from "react-icons/tb";
 
 const Navigation = () => {
-  const { cartItems } = useCart();
+  const { getTotalOfItems } = useCart();
 
   return (
     <div className="container flex flex-wrap flex-row items-center justify-center md:justify-between lg:justify-between mx-auto mt-5">
@@ -26,7 +26,7 @@ const Navigation = () => {
             <Link to="/cart">
               {" "}
               <div className="flex ">
-              <TbShoppingCart size={20} /> {cartItems.length}
+              <TbShoppingCart size={20} /> {getTotalOfItems()}
               </div>
             </Link>
           </li>
