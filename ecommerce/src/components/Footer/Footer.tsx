@@ -1,6 +1,6 @@
 const Footer = () => {
     return (
-        <footer className="flex mt-28 mr-8 ml-8 mb-8 justify-around">
+        <footer className="flex mt-auto pt-12 mr-8 ml-8 mb-8 justify-around">
             <div >
                 <div className="logo font-bold text-base md:text-3xl">
                     <span className="text-[#3C9379]">N</span>eithaClothes
