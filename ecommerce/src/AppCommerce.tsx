@@ -14,7 +14,7 @@ const AppCommerce = () => {
     <CartProvider>
     <Router>
       {" "}
-      <div className="App ">
+      <div className="App flex flex-col min-h-screen ">
         <Navigation />
         <Routes>
           <Route path="/" Component={Home}/>
