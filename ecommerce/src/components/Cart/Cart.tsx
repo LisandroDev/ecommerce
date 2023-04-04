@@ -1,6 +1,6 @@
 import { useCart } from "./CartProvider";
 import { TbMinus } from "react-icons/tb";
-import Modal from "../Checkout/Checkout";
+import CheckoutModal from "../Checkout/CheckoutModal";
 
 const Cart = () => {
   const { cartItems, clearCart, removeItemFromCart, getTotalPrice } = useCart();
@@ -67,7 +67,7 @@ const Cart = () => {
                 
                 Clear Cart
               </button>
-              <Modal />
+              <CheckoutModal />
             </div>
           </div>
         </div>
