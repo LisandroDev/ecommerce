@@ -10,10 +10,11 @@ type CartItem = Product & Item;
 type CartContextType = {
   cartItems: CartItem[];
   addItemToCart: (item: Product) => void;
-  removeItemFromCart: (itemIndex: number) => void;
+  removeItemFromCart: (itemId: number) => void;
   clearCart: () => void;
   getCountOfItem: (itemId: number) => number;
   getTotalOfItems: () => number;
+  getTotalPrice: () => number;
 };
 
 const CartContext = createContext<CartContextType>({
@@ -23,6 +24,7 @@ const CartContext = createContext<CartContextType>({
   clearCart: () => {},
   getCountOfItem: (itemId: number) => 0,
   getTotalOfItems: () => 0,
+  getTotalPrice: () => 0
 });
 
 export const useCart = () => useContext(CartContext);
@@ -80,6 +82,12 @@ const CartProvider = ({ children }: CartProviderProps) => {
     }
     return 0;
   };
+
+  const getTotalPrice = () => {
+    const initialValue = 0;
+    const total = cartItems.reduce((accumulator, item) => accumulator + item.quantity * item.price, initialValue)
+    return total; 
+  }
   
   const getTotalOfItems = () => {
     const initialValue = 0;
@@ -97,7 +105,8 @@ const CartProvider = ({ children }: CartProviderProps) => {
     removeItemFromCart,
     clearCart,
     getCountOfItem,
-    getTotalOfItems
+    getTotalOfItems,
+    getTotalPrice
   };
 
   return (

@@ -1,14 +1,24 @@
 import { useCart } from "./CartProvider";
+import { TbMinus } from "react-icons/tb";
+import Modal from "../Checkout/Checkout";
 
 const Cart = () => {
-  const { cartItems, clearCart } = useCart();
+  const { cartItems, clearCart, removeItemFromCart, getTotalPrice } = useCart();
 
-  const renderTableItems = (name: string, quantity: number, price: number) => {
+  const renderTableItems = (
+    name: string,
+    quantity: number,
+    price: number,
+    id: number
+  ) => {
     return (
       <tr>
         <td>{name} </td>
         <td>{quantity}</td>
         <td>{price}</td>
+        <button onClick={() => removeItemFromCart(id)}>
+          <TbMinus />
+        </button>
       </tr>
     );
   };
@@ -38,11 +48,27 @@ const Cart = () => {
               </thead>
               <tbody>
                 {cartItems.map((item) =>
-                  renderTableItems(item.name, item.quantity, item.price)
+                  renderTableItems(
+                    item.name,
+                    item.quantity,
+                    item.price,
+                    item.id
+                  )
                 )}
               </tbody>
             </table>
-            <button onClick={handleClear}> Clear Cart</button>
+            <div>Total: $ {getTotalPrice().toFixed(2)}</div>
+            <div className="flex justify-between gap-x-4">
+              <button
+                className="text-blueGray-500 md:px-4 bg-transparent border border-solid border-blueGray-500 hover:bg-blueGray-500 hover:text-white active:bg-blueGray-600 font-bold uppercase text-xs px-2 py-2 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                onClick={handleClear}
+              >
+                {" "}
+                
+                Clear Cart
+              </button>
+              <Modal />
+            </div>
           </div>
         </div>
       </div>
