@@ -143,13 +143,13 @@ const Checkout = () => {
           </div>
           <div className="flex items-center justify-between">
             <p className="text-sm font-medium text-gray-900">Shipping</p>
-            <p className="font-semibold text-gray-900">$8.00</p>
+            <p className="font-semibold text-gray-900">${getTotalPrice() > 0 ? 8 : 0}</p>
           </div>
         </div>
         <div className="mt-6 flex items-center justify-between">
           <p className="text-sm font-medium text-gray-900">Total</p>
           <p className="text-2xl font-semibold text-gray-900">
-            ${Number(getTotalPrice()) + 8}
+            ${getTotalPrice() > 0 ? Number(getTotalPrice()) + 8 : 0}
           </p>
         </div>
       </div>
