@@ -10,7 +10,7 @@ function shuffleArray(array: []) {
 
 const getProducts = async (limit?: number) => {
   try {
-    const response = await axios.get(`http://localhost:3003/products`);
+    const response = await axios.get(`/products`);
     if (limit) {
       
       return shuffleArray(response.data).splice(0,limit);
