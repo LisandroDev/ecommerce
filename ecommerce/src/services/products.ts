@@ -18,7 +18,7 @@ const getProducts = async (limit?: number) => {
       return response.data;
     }
   } catch (error) {
-    console.error(error )
+    console.error(error)
     throw new Error("No data was return.");
   }
 };
