@@ -14,11 +14,11 @@
     ],
     "routes": [
       {
-        "src": "/images/(.*)",
+        "src": "/images",
         "dest": "buildServer/index.js"
       },
       {
-        "src": "/products/(.*)",
+        "src": "/products",
         "dest": "buildServer/index.js"
       },
       {
