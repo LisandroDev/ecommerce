@@ -11,7 +11,6 @@ app.use(cors());
 
 const PORT = 3003;
 
-app.use(express.static('build'))
 app.use('/images', imagesRouter)
 app.use('/products', productsRouter)
 
