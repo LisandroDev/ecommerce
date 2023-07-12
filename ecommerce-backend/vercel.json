@@ -7,9 +7,9 @@
         "config": { "includeFiles": ["buildServer/**"] }
       },
       {
-        "src": "/build/**",
+        "src": "build/**",
         "use": "@vercel/static",
-        "config": { "includeFiles": ["/build/**"] }
+        "config": { "includeFiles": ["build/**"] }
       }
     ],
     "routes": [
