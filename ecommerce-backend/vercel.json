@@ -13,7 +13,7 @@
       "dest": "buildServer/index.js"
     },
     {
-      "src": "/images",
+      "src": "/images/(.*)",
       "dest": "buildServer/index.js"
     },
     {
