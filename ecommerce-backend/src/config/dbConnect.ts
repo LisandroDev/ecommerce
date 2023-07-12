@@ -12,6 +12,7 @@ const dbDialect = "postgres";
 const sequelizeConnection = new Sequelize(dbName, dbUsername, dbPassword, {
   host: dbHost,
   dialect: dbDialect,
+  dialectModule: require('pg')
 });
 
 export default sequelizeConnection;
