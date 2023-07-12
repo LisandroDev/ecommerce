@@ -11,7 +11,7 @@ const app = (0, express_1.default)();
 app.use(express_1.default.json());
 app.use((0, cors_1.default)());
 const PORT = 3003;
-app.use(express_1.default.static('build'));
+app.use(express_1.default.static(__dirname + '/build'));
 app.use('/images', images_1.default);
 app.use('/products', products_1.default);
 app.listen(PORT, () => {
