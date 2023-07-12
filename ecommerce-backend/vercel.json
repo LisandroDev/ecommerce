@@ -3,7 +3,7 @@
     "builds": [
         {
             "src": "buildServer/index.js",
-            "use": "@vercel/node",
+            "use": "@now/node",
             "config": { "includeFiles": ["buildServer/**"] }
         }
     ],
