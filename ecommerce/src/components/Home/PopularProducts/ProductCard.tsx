@@ -21,7 +21,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
     >
       <img
         alt={product.name}
-        src={`${product.imageUrl}`}
+        src={`${process.env.REACT_APP_BACKEND}${product.imageUrl}`}
         
         className={responsiveImg + " w-[157.5px] h-[150.75px] rounded-3xl shadow-lg rounded max-w-full h-auto align-middle border-none  "}
       ></img>

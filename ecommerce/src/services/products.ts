@@ -10,7 +10,7 @@ function shuffleArray(array: []) {
 
 const getProducts = async (limit?: number) => {
   try {
-    const response = await axios.get(`/products`);
+    const response = await axios.get(`${process.env.REACT_APP_BACKEND}/products`);
     if (limit) {
       
       return shuffleArray(response.data).splice(0,limit);
@@ -18,6 +18,7 @@ const getProducts = async (limit?: number) => {
       return response.data;
     }
   } catch (error) {
+    console.error(error )
     throw new Error("No data was return.");
   }
 };
