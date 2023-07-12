@@ -1,20 +1,24 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "buildServer/index.js",
-        "use": "@vercel/node",
-        "config": { "includeFiles": ["buildServer/**"] }
-      }
-    ],
-    "routes": [
-      {
-        "src": "/images",
-        "dest": "buildServer/index.js"
-      },
-      {
-        "src": "/products",
-        "dest": "buildServer/index.js"
-      }
-    ]
-  }
+  "version": 2,
+  "builds": [
+    {
+      "src": "buildServer/index.js",
+      "use": "@vercel/node",
+      "config": { "includeFiles": ["buildServer/**"] }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "buildServer/index.js"
+    },
+    {
+      "src": "/images",
+      "dest": "buildServer/index.js"
+    },
+    {
+      "src": "/products",
+      "dest": "buildServer/index.js"
+    }
+  ]
+}
