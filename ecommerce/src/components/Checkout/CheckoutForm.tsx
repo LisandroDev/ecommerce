@@ -1,7 +1,14 @@
 import { useCart } from "../Cart/CartProvider";
+import { useState } from "react";
+
+import { countries } from "../../assets/countries";
+import { countryEmojis } from "../../assets/countries";
 
 const Checkout = () => {
   const { getTotalPrice } = useCart();
+  const [selectedCountry, setSelectedCountry] = useState<string>('')
+
+
   return (
     <div className="mt-10 bg-gray-50 px-4 pt-8 lg:mt-0">
       <p className="text-xl font-medium">Payment Details</p>
@@ -13,7 +20,7 @@ const Checkout = () => {
         <div className="relative">
           <input
             type="text"
-            id="email"
+            id="email" 
             name="email"
             className="w-full rounded-md border border-gray-200 px-4 py-3 pl-11 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500"
             placeholder="your.email@gmail.com"
@@ -115,18 +122,22 @@ const Checkout = () => {
               placeholder="Street Address"
             />
             <div className="pointer-events-none absolute inset-y-0 left-0 inline-flex items-center px-3">
-              <img
+              <p>{selectedCountry !== '' ? countryEmojis[selectedCountry] : ''}</p>
+              {/* <img
                 className="h-4 w-4 object-contain"
                 src="https://flagpack.xyz/_nuxt/4c829b6c0131de7162790d2f897a90fd.svg"
                 alt=""
-              />
+              /> */}
             </div>
           </div>
           <select
             name="billing-state"
+            onChange={(optionElement) => setSelectedCountry(optionElement.currentTarget.value)}
             className="w-full rounded-md border border-gray-200 px-4 py-3 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500"
           >
-            <option value="State">State</option>
+            <option value="Country">Country</option>
+            {countries.map((country) => <option key={country + 'key'} value={country}>{country}</option>)}
+            
           </select>
           <input
             type="text"
